@@ -1,6 +1,6 @@
 # Backend do Clube do Livro — operação e evidência
 
-Backend implantado no projeto gratuito wmrrscohfibprfqrprzf em 28/10/2026: migrações 001/002 aplicadas e Edge clube-api versão 2 ativa. A interface está publicada no GitHub Pages em https://caue-a11y.github.io/clube-do-livro-paracuru/; coleta ainda fechada. Não há usuário administrativo nem respostas iniciais; coleta encerrada e dados de privacidade nulos. Evidências consolidadas em ../VALIDACAO.md.
+Backend implantado no projeto gratuito wmrrscohfibprfqrprzf em 28/10/2026: migrações 001/002 aplicadas e Edge clube-api versão 2 ativa. A interface está publicada no GitHub Pages em https://caue-a11y.github.io/clube-do-livro-paracuru/; coleta agora aberta após validação integrada real. O usuário administrativo está confirmado e autorizado, a privacidade real foi configurada e a coleta está aberta. O único registro sintético usado no teste integrado foi excluído. Evidências consolidadas em ../VALIDACAO.md.
 
 ## Arquivos e arquitetura
 
@@ -123,7 +123,7 @@ Referências consultadas: https://supabase.com/docs/guides/functions/auth e http
 
 ### Limitações ainda não validadas
 
-- Sem Deno/CLI Supabase/psql local; não rodou deno check/serve. O deploy oficial Supabase foi concluído e a função respondeu aos probes HTTPS. SQL foi exercitado em PostgreSQL WASM e em transação revertida no serviço hospedado. Login do organizador ainda não foi configurado.
-- Não houve autenticação email/senha real, endpoint Auth real, teste ponta a ponta navegador→Edge→Supabase, restart do fornecedor, concorrência com duas conexões PostgreSQL reais, backup/PITR ou recuperação real. Travas/CAS foram implementados e seus efeitos sequenciais exercitados; não alegar stress de concorrência multi-instância.
-- Não foram feitas coleta real, abertura, criação de administrador, privacidade fictícia, métricas ou ações automáticas de convite. Retenção automática e alerta de contatos duplicados não foram construídos; respostas não são deduplicadas/fundidas por contato, preservando a regra de contar registros, não pessoas únicas.
+- Sem Deno/CLI Supabase/psql local; não rodou deno check/serve. O deploy oficial Supabase foi concluído e a função respondeu aos probes HTTPS. SQL foi exercitado em PostgreSQL WASM e em transação revertida no serviço hospedado. Login e logout reais do organizador foram verificados; nenhuma credencial foi inspecionada.
+- Login real, consultas autenticadas, formulário público, persistência, CSV, exclusão e logout foram validados na integração final. Continuam sem validação restart do fornecedor, concorrência com duas conexões reais e backup/PITR/recuperação completos. Não alegar teste de carga multi-instância.
+- A conta administrativa e a abertura foram concluídas com os dados reais do organizador. O teste sintético foi removido; não há convites automáticos. Retenção automática e alerta de contatos duplicados não foram construídos; não fundir respostas automaticamente por contato.
 - O envio público exige privacy_notice_version. A RPC adicional verifica o aviso na transação antes de inserir; mudança durante preenchimento é recusada com 409, preservando as respostas na interface para revisão com o aviso atualizado. Replay já persistido continua devolvendo o protocolo mesmo após mudança do aviso ou fechamento.

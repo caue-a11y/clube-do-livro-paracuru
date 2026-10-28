@@ -1,65 +1,65 @@
-# Validação — 28/10/2026
+# Validação — entrega final em 28/10/2026
 
-## Resultado e limites
+## Estado confirmado
 
-Implementação da interface pública, painel e backend entregue para integração. Banco gratuito e função clube-api versão 2 implantados no projeto Supabase wmrrscohfibprfqrprzf, região sa-east-1. Duas migrações aplicadas com sucesso. A base real está vazia, sem administrador cadastrado e com coleta fechada.
+Site publicado e coleta aberta: https://caue-a11y.github.io/clube-do-livro-paracuru/
 
-Estado confirmado em 2026-10-28T16:14:09-03:00: o repositório https://github.com/caue-a11y/clube-do-livro-paracuru foi criado na conta correta e recebeu 41 arquivos no commit de código fbc20a2cfcd9346f3dc904d7fab5d98aa2ca4c1f. A árvore remota foi comparada com os hashes Git dos 41 arquivos locais, sem divergências. GitHub Pages foi ativado pela branch main, pasta raiz, e o site https://caue-a11y.github.io/clube-do-livro-paracuru/ abriu com HTTPS no navegador. A prévia de revisão continua sendo um artefato separado sem coleta.
+Painel privado: https://caue-a11y.github.io/clube-do-livro-paracuru/admin.html
 
-## Verificações executadas
+Código na conta solicitada: https://github.com/caue-a11y/clube-do-livro-paracuru
 
-### Automação local
+Backend gratuito Supabase wmrrscohfibprfqrprzf, região sa-east-1, função clube-api v2. As duas migrações foram aplicadas. A conta do organizador foi criada por ele no formulário seguro do Supabase, confirmada e autorizada na allowlist. Nenhuma senha, hash de senha, token de sessão ou chave secreta foi consultada, salva no código ou publicada.
 
-Ambiente: Node.js 24.22.1, Python 3.9.25. Interface sem dependências npm/build. Backend Deno para Supabase Edge; libphonenumber-js 1.13.15/max. SQL validado em PostgreSQL embarcado PGlite 0.3.14, obtido apenas para testes, com integridade SHA-256 conferida; binários não integram a entrega.
+Responsável: Cauê Almeida Cabral. Canal público de privacidade: caue@orbbotia.com. Retenção: 90 dias, com exclusão manual, conforme decisão explícita do organizador. Aviso versão privacidade-v1-r2. Configuração final revision 3/open true, com abertura auditada sob a conta autorizada.
 
-Comando sh tests/backend-check.sh: 56 testes passaram, nenhum falhou ou foi ignorado. Registro em docs/testes-automatizados.txt. Esse comando executa testes de regras, transporte HTTP com upstreams simulados, biblioteca real de telefone e SQL real em base temporária. Os testes comuns npm test não baixam o runtime e indicam explicitamente os testes opcionais ignorados quando ele não está presente.
+## Teste integrado REAL, sem mocks
 
-npm run check passou para os módulos da interface e análise. python3 scripts/package_site.py gerou _site somente com arquivos públicos. Os testes não foram substituídos por dados fictícios na aplicação publicada: simulações só existem no ambiente isolado de testes.
+Evidência estruturada: docs/validacao-integrada-real.json.
 
-Casos cobertos: obrigatoriedade/enums/limites e condições dos 14 itens; contato descartado sem autorização; Instagram e telefone; exclusividade; coerência local/modalidade; idempotência canônica; replay após coleta fechada; conflito de chave/status/revisão; RLS e grants; autorização em cada rota; filtros e fuso; CSV com mais de 1.000 registros; fórmulas, aspas e quebras; falha de serviço sem sucesso fictício; alterações de status auditadas; exclusão com protocolo/revisão e bloqueio de replay excluído; aviso de privacidade versionado e conferido transacionalmente.
+1. O organizador entrou no painel com sua própria senha. A sessão autenticada carregou configurações e lista privadas; nenhuma credencial foi lida pelo agente.
+2. A coleta foi aberta pelo formulário administrativo usando os dados de privacidade já confirmados. O retorno público da API confirmou open true.
+3. O questionário público real foi aberto em frame de mesma origem para preservar a sessão administrativa em memória. Foram percorridas as três etapas e a revisão. O aviso exibiu nome, email e 90 dias antes do envio.
+4. Foi enviado pelo botão real Enviar respostas um único registro sintético identificado como Pessoa Teste Técnico 1793218100468, sem autorização de contato. Nenhum mock de API foi usado. O protocolo retornado foi CL-65ee253f47ab445cb73e11516afa8eb4, recebido em 28/10/2026 às 17:08:35, horário de Brasília.
+5. Uma consulta separada ao banco confirmou o registro persistido, data do servidor, versão do aviso e snapshot correto. Q13 = nao e nenhum Q14 armazenado.
+6. A busca privada pelo nome encontrou uma resposta. Lista e detalhe autenticados responderam 200 e mostraram o mesmo protocolo. Não existe leitura pública por protocolo.
+7. A exportação exigiu seleção filtrada e confirmação de cuidado. O CSV autenticado respondeu 200, 1.683 bytes, cabeçalho e uma linha de resposta; continha somente o teste no recorte. Não foi exportada base com participantes reais.
+8. O teste foi excluído pelo painel após digitar o protocolo e conferir o alvo. DELETE autenticado respondeu 200. Consulta posterior confirmou ausência da resposta e do histórico vinculado; apenas tombstone restrito com identificadores aleatórios foi mantido. Após a limpeza, a base estava sem respostas. Nenhum outro registro foi alterado.
+9. Os filtros foram limpos. Encerrar sessão respondeu 204 no Supabase, limpou o conteúdo privado e devolveu a tela de login. Consulta posterior sem sessão foi negada com 401.
+10. O endereço público foi reaberto e mostrou Pesquisa de interesse aberta e o botão Responder ao formulário. A coleta foi mantida aberta; a resposta sintética não ficou na base.
 
-Fixture de compatibilidade: presencial sábado/manhã quinzenal = A/B/D/F; regulares A/B/F; regulares contatáveis A/B; variável E. Online B/C; alternado B. Distribuição de gêneros com denominador sete respondentes e duas marcações adicionais, sem inflar o total.
+A observação de requisições no navegador registrou apenas método, caminho, status e metadados do CSV sintético. Ela não alterou respostas da API nem inspecionou headers de autenticação, senhas ou tokens.
 
-### Projeto Supabase real
+## Automação e banco isolado
 
-Nove probes HTTPS passaram depois do deploy da função v2; evidência em docs/probes-publicos.json:
+Ambiente de desenvolvimento: Node.js 24.22.1, Python 3.9.25. Interface sem dependências npm/build. Backend Deno, libphonenumber-js 1.13.15/max. SQL testado também em PostgreSQL 17.5 embarcado PGlite 0.3.14, baixado só para testes com integridade SHA-256 conferida e removido depois.
 
-- Configuração pública retornou HTTP 200 e coleta fechada.
-- Lista, detalhe, configuração e CSV sem sessão retornaram HTTP 401.
-- Leitura direta da tabela de respostas com chave publicável foi negada (401).
-- Novo envio válido com coleta fechada retornou 409, sem registro.
-- Envio com campos obrigatórios ausentes retornou 400.
-- Origem não autorizada retornou 403.
+sh tests/backend-check.sh passou com 56 testes, zero falhas e zero ignorados. Registro: docs/testes-automatizados.txt. O conjunto cobre regras do questionário, HTTP com upstreams de teste, biblioteca real de telefone, SQL real temporário, compatibilidade e aviso versionado. npm run check passou nos módulos da interface e análise. O script de probes públicos foi verificado sintaticamente após acrescentar a trava que proíbe POSTs quando a coleta já está aberta.
 
-O teste tests/deployed-transaction.sql foi executado no projeto real dentro de BEGIN/ROLLBACK. Inseriu um registro sintético e confirmou replay após fechamento sem duplicação. A alteração de abertura da coleta ficou apenas na transação não confirmada, portanto nunca ficou visível ao público. A consulta posterior confirmou zero respostas, zero administradores, coleta fechada e dados de privacidade nulos. O teste não equivale a envio público bem-sucedido pelo navegador.
+Coberturas: enums/limites/obrigatoriedade; Q14 descartado sem autorização; Instagram e telefone; exclusividades e coerência local/modalidade; hash canônico e idempotência; replay após coleta fechada; CAS, audit, exclusão e tombstone; RLS/grants; autorização por rota; datas São Paulo; filtros AND/OR; CSV integral com mais de mil registros e proteção contra fórmulas; falhas sem sucesso fictício; snapshot do aviso vinculado à versão mostrada no cliente.
 
-As seis tabelas têm RLS habilitada e privilégios de anon/authenticated revogados. O diagnóstico de segurança Supabase informou apenas seis avisos INFO RLS Enabled No Policy, correspondentes ao bloqueio deliberado de acesso direto: somente o backend service_role acessa tabelas. Não criar policies públicas para silenciar esses avisos. Referência: https://supabase.com/docs/guides/database/database-linter?lint=0008_rls_enabled_no_policy
+Fixture manual confrontada: presencial sábado/manhã quinzenal A/B/D/F; regulares A/B/F; contatáveis A/B; variável E. Online B/C; alternado B. Distribuição de gêneros usa sete respondentes, não nove marcações. IDs/horários repetidos não inflam os totais.
 
-### Navegador da prévia isolada
+## Projeto Supabase e probes públicos
 
-Renderização inicial sem erros de console ou recursos ausentes. Chromium remoto, prévia v1 e integração final v2. Na prévia, teste de interação verificou avanço, erros obrigatórios, revisão, horários variáveis limpando horários fixos e contato visível somente após autorização. Retirar autorização limpou o valor, ocultou o campo e removeu o contato da revisão. O botão de envio permaneceu desabilitado e nenhuma confirmação fictícia foi exibida.
+Antes da abertura, nove probes reais verificaram configuração fechada, quatro rotas administrativas negadas sem sessão, acesso direto à tabela negado, envio fechado recusado, validação inválida e origem não autorizada. Uma transação sintética BEGIN/ROLLBACK no projeto real confirmou inserção e replay sem deixar fixtures gravadas ou abrir a coleta para outros clientes.
 
-As larguras 320, 390, 768 e 1440 px foram medidas em frames de teste com viewports reais correspondentes, sem rolagem horizontal na abertura do formulário. Nenhum input testado ficou sem label associado. Isso não é teste em aparelhos físicos ou no navegador interno do Instagram, e não comprova conformidade completa de acessibilidade.
+Depois da abertura, os probes passaram a executar somente GETs: sete verificações passaram, e os dois POSTs foram explicitamente omitidos para não inserir testes na produção aberta. Evidência atual: docs/probes-publicos.json. Eles não substituem o teste integrado de envio e exclusão realizado no navegador.
 
-### Painel com API simulada
+As seis tabelas têm RLS e privilégios de anon/authenticated revogados. O diagnóstico Supabase apresentou somente avisos INFO RLS Enabled No Policy, esperados no desenho deny-all com acesso por service_role exclusivamente no backend. Não adicionar policies públicas para silenciá-los. Referência: https://supabase.com/docs/guides/database/database-linter?lint=0008_rls_enabled_no_policy
 
-A frente do painel concluiu 17 checagens em Chrome 156, com rede interceptada e 123 registros sintéticos isolados. O relatório local foi conferido e as linhas de resultado estão em docs/painel-testes-simulados.txt. Foram exercitados login/refresh simulados, todas as páginas filtradas, denominadores, compatibilidade, respostas obsoletas, texto hostil, CAS/409, exclusão, CSV, bloqueio de abertura sem privacidade, logout e ausência de allowlist. Login, painel e detalhe expandido não apresentaram overflow nas quatro larguras. Esses resultados não comprovam conta real, autorização ou persistência no Supabase: as pendências integradas abaixo permanecem.
+## Publicação e interface
 
-### Endereço público final
+GitHub Pages usa main, pasta / (root), com .nojekyll. O bloqueio inicial de criar repositório pela integração foi resolvido por login seguro do usuário no navegador; os pushes posteriores funcionaram normalmente. A árvore dos 41 arquivos do primeiro commit de código fbc20a2cfcd9346f3dc904d7fab5d98aa2ca4c1f foi comparada com os hashes locais sem divergências. Documentação e um utilitário de probes foram atualizados depois; a interface e a API não precisaram de alteração para abrir a coleta.
 
-No GitHub Pages real, os cinco recursos conferidos (public.js, admin.js, styles.css, questionario.json e admin.html) retornaram HTTP 200. O frontend fez consulta CORS real à API e confirmou coleta fechada. A navegação nas três etapas até a revisão funcionou com dados sintéticos apenas na memória; envio ficou desabilitado e nenhum sucesso fictício foi mostrado. A página administrativa carregou o login e uma consulta privada sem sessão foi negada com 401, também a partir da origem real do site. Não foram usados dados reais nem criado administrador.
+Os recursos public.js, admin.js, styles.css, questionario.json e admin.html retornaram 200 no URL final. CORS foi validado na origem GitHub Pages real. A prévia isolada continua sendo só demonstração sem API/coleta; seu estado fechado não representa o site público atual.
 
-## Critérios com validação ainda pendente
+Além do teste real acima, as frentes executaram testes de interface com API simulada: formulário público e 17 checagens do painel com 123 registros sintéticos, incluindo refresh, respostas obsoletas, texto hostil, denominadores, compatibilidade, CAS, exclusão, CSV, privacidade, logout e allowlist. Evidência: docs/painel-testes-simulados.txt. Foram conferidas larguras 320/390/768/1440 sem overflow no formulário, login, painel e detalhe expandido. Isso não comprova acessibilidade completa nem uso em aparelhos físicos.
 
-- Fluxo de ponta a ponta no URL público final, do envio no navegador até consulta em conta administrativa real (AC01).
-- Persistência confirmada depois de reinício/deploy e recuperação completa de backup externo (AC02 e parte de AC14).
-- Login/logout/expiração com conta real do organizador e duas sessões reais simultâneas (partes de AC06/AC16). Autorização e CAS foram testados em camadas isoladas e acesso público foi negado no projeto real.
-- Simulação de perda real da confirmação na rede pública, duplo clique e repetição de timeout na interface integrada (parte de AC05/AC12).
-- Exportação/detalhe/status no painel conectado com dados de teste identificados, seguida de exclusão, depois de cadastrar o organizador (partes de AC09/AC10).
-- Restauração de dump completo em projeto isolado com reaplicação de exclusões e expiração de backups (parte de AC14). Procedimento documentado; não realizado neste ambiente HTTP-only.
-- Revisão completa de teclado, leitor de tela, zoom e painel autenticado nas quatro larguras; Safari/iPhone e navegador do Instagram (parte de AC15).
-- Teste observado com participantes e organizador reais: não realizado.
+## Limitações que permanecem
 
-## Antes de abrir coleta real
-
-A publicação e o URL amigável já foram conferidos. Falta cadastrar o acesso administrativo por canal seguro, informar responsável/canal de privacidade e retenção, verificar os limites/logs/backup do fornecedor e completar o fluxo integrado acima. A retenção informada não é um expurgo automático: o organizador precisa executar as exclusões ou aprovar rotina própria. Sem essas condições, manter coleta fechada.
+- Não foi feita restauração completa de dump/backup do fornecedor em projeto isolado nem verificado expurgo de backups. Procedimento documentado em docs/OPERACAO.md. CSV é cópia para análise, não backup restaurável completo.
+- Não houve reinício deliberado do Supabase, teste de carga ou concorrência simultânea entre duas sessões reais. A persistência foi comprovada em requisições separadas, e CAS/travas foram exercitados em testes SQL isolados.
+- Duplo clique/perda de confirmação no navegador foram exercitados com API simulada; replay também foi validado em SQL, mas a rede pública não foi interrompida propositalmente durante o envio real.
+- Sem teste em Safari/iPhone físico, navegador do Instagram, leitor de tela ou usabilidade observada com participantes reais.
+- Retenção de 90 dias não dispara expurgo automático. O organizador precisa excluir dados vencidos e cópias locais, ou aprovar uma rotina específica. Logs e backups de infraestrutura obedecem também às condições do fornecedor.
+- Não há disparo de mensagens, grupos automáticos, rastreamento de visitantes, presença automática, cobrança ou promessa de conformidade legal.

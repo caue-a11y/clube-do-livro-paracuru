@@ -1,0 +1,59 @@
+{
+  "date": "2026-10-28",
+  "environment": "GitHub Pages público + Supabase real; navegador Chromium",
+  "site": "https://caue-a11y.github.io/clube-do-livro-paracuru/",
+  "admin": "https://caue-a11y.github.io/clube-do-livro-paracuru/admin.html",
+  "mocked": false,
+  "credentials_inspected": false,
+  "authenticated_admin_verified": true,
+  "synthetic_test": {
+    "name": "Pessoa Teste Técnico 1793218100468",
+    "protocol": "CL-65ee253f47ab445cb73e11516afa8eb4",
+    "received_at_utc": "2026-10-28T20:08:35.296582Z",
+    "contact_authorized": false,
+    "contact_stored": false,
+    "privacy_notice_version": "privacidade-v1-r2",
+    "persisted_in_separate_database_query": true,
+    "visible_in_private_filtered_list": true,
+    "visible_in_private_detail": true,
+    "filtered_records": 1,
+    "csv": {
+      "http_status": 200,
+      "content_type": "text/csv; charset=utf-8",
+      "bytes": 1683,
+      "lines": 2,
+      "contains_test_protocol_and_name": true
+    },
+    "deleted_via_authenticated_ui": true,
+    "delete_http_status": 200,
+    "absent_from_database_after_delete": true,
+    "linked_history_remaining": 0,
+    "restricted_tombstone_present": true,
+    "responses_after_test_cleanup": 0
+  },
+  "private_api_observed": {
+    "authenticated_list_status": 200,
+    "authenticated_detail_status": 200,
+    "authenticated_export_status": 200,
+    "authenticated_delete_status": 200,
+    "logout_status": 204,
+    "unauthenticated_list_after_logout_status": 401,
+    "private_dom_cleared_after_logout": true
+  },
+  "final_state": {
+    "collection_open": true,
+    "responsible": "Cauê Almeida Cabral",
+    "privacy_channel": "caue@orbbotia.com",
+    "retention_days": 90,
+    "retention_enforcement": "manual",
+    "opening_audited": true,
+    "settings_revision": 3,
+    "public_start_button": "Responder ao formulário"
+  },
+  "remaining_limits": [
+    "Sem teste de restauração completa de backup do fornecedor.",
+    "Sem reinício deliberado do projeto Supabase ou teste de carga multissessão.",
+    "Sem teste em Safari/iPhone físico ou navegador interno do Instagram.",
+    "Sem validação completa com leitor de tela ou usabilidade observada com participantes reais."
+  ]
+}

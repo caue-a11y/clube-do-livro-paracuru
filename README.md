@@ -4,7 +4,9 @@ Página de pesquisa com 14 perguntas, revisão antes do envio e painel privado d
 
 ## Estado desta entrega
 
-O site foi publicado em https://caue-a11y.github.io/clube-do-livro-paracuru/ e o backend está implantado no projeto gratuito do Supabase. Consulte VALIDACAO.md para o que realmente foi executado. A coleta começa fechada: não há responsável/canal de privacidade nem retenção definidos pelo organizador. Nenhum dado real deve ser coletado antes dessa configuração. Não há administrador com senha pública ou dados de demonstração misturados na base.
+O site está publicado e recebendo respostas em https://caue-a11y.github.io/clube-do-livro-paracuru/. Backend gratuito Supabase conectado, conta do organizador autorizada e teste real de envio, consulta privada, CSV, exclusão e logout concluído. O registro sintético foi removido. Consulte VALIDACAO.md para as evidências e limitações.
+
+Responsável: Cauê Almeida Cabral. Canal de privacidade: caue@orbbotia.com. Retenção: 90 dias, com exclusão manual. Não há senha pública ou dados de demonstração misturados na base.
 
 O repositório público https://github.com/caue-a11y/clube-do-livro-paracuru foi criado após login seguro no navegador. GitHub Pages está ativo na branch main, pasta raiz; URL público e conexão com a API foram conferidos no navegador. Consulte VALIDACAO.md e docs/PUBLICACAO.md para as verificações e pendências.
 
@@ -25,7 +27,11 @@ Com Node.js 24 e Python 3 instalados, npm test executa os testes e npm run check
 
 Não há dependências npm para instalar nem build JavaScript. Não use localStorage para guardar respostas ou contato. O rascunho é perdido ao recarregar; a interface avisa quando o navegador permite.
 
-## Configurar o acesso do organizador
+## Acesso do organizador
+
+O acesso de caue@orbbotia.com já está criado, confirmado e autorizado. Entre em https://caue-a11y.github.io/clube-do-livro-paracuru/admin.html com a senha definida por você. O guia curto está em docs/GUIA-DO-ORGANIZADOR.md.
+
+Para reproduzir a configuração ou autorizar uma nova conta, apenas mediante autorização do organizador:
 
 1. No painel do projeto Supabase, Authentication > Users, crie o usuário administrativo por canal seguro com email/senha próprios. Não envie a senha no chat, não a publique no repositório e não use conta de exemplo. Se habilitar confirmação de email/recuperação, configure o provedor de email e os limites de envio do Supabase.
 2. Adicione exclusivamente o UUID desse usuário em public.admin_users no editor SQL autenticado. O arquivo docs/OPERACAO.md explica a operação. Uma conta autenticada sem essa autorização continua impedida de acessar respostas.
@@ -36,7 +42,7 @@ Essa escolha usa o fluxo oficial Supabase Auth com token em memória, em vez de 
 
 ## Publicar
 
-O destino solicitado é a conta GitHub caue-a11y, com repositório sugerido clube-do-livro-paracuru. A criação foi feita pelo navegador autenticado e o código enviado pela integração. Não publicar em outra conta como substituição.
+O destino solicitado é a conta GitHub caue-a11y, com repositório clube-do-livro-paracuru. A criação foi feita pelo navegador autenticado e o código enviado pela integração. Não publicar em outra conta como substituição.
 
 Depois do upload, em Settings > Pages, selecione Deploy from a branch, branch main e pasta / (root). Como a interface não requer build, esse é o caminho mais simples. O arquivo .nojekyll evita processamento Jekyll. Os testes foram executados antes da entrega; o workflow opcional de teste/build está documentado em docs/exemplos/pages-workflow.yml e não fica ativo em paralelo com a publicação por branch. Confira o endereço efetivamente retornado pelo GitHub e valide HTTPS, respostas, painel privado e exclusão de um teste identificado. Não trate o URL do repositório como URL do formulário.
 

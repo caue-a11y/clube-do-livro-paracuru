@@ -1,5 +1,7 @@
 # Operação do organizador
 
+Estado final em 28/10/2026: coleta aberta, conta caue@orbbotia.com autorizada, responsável Cauê Almeida Cabral, canal de privacidade caue@orbbotia.com e retenção de 90 dias. Senha definida pelo organizador em canal seguro. O teste técnico foi excluído. Veja GUIA-DO-ORGANIZADOR.md para a rotina de uso. As instruções de criação abaixo servem também para recuperação ou reprodução em ambiente autorizado.
+
 ## Antes de abrir
 
 A página é uma pesquisa de interesse, não uma inscrição confirmada. O clube ainda não tem data, local, horário exato ou custo definidos. Informe um responsável real, um canal que você acompanha para pedidos de privacidade e um prazo de retenção que possa cumprir. O formulário apresenta finalidade, dados recebidos e como pedir exclusão; a autorização de contato é separada e não vem marcada.

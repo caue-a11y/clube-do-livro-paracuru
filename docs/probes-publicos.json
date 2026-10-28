@@ -1,20 +1,20 @@
 {
-  "tested_at": "2026-10-28T19:11:22.573Z",
+  "tested_at": "2026-10-28T20:15:14.968Z",
   "results": [
     {
-      "label": "Config pública confirma coleta fechada",
+      "label": "Configuração pública da coleta",
       "status": 200,
       "expected": [
         200
       ],
       "ok": true,
       "body": {
-        "open": false,
+        "open": true,
         "privacy": {
-          "channel": null,
-          "responsible": null,
-          "notice_version": null,
-          "retention_days": null
+          "channel": "caue@orbbotia.com",
+          "responsible": "Cauê Almeida Cabral",
+          "notice_version": "privacidade-v1-r2",
+          "retention_days": 90
         },
         "form_version": "2026-10-28-v1-proposta"
       }
@@ -79,36 +79,9 @@
       }
     },
     {
-      "label": "Coleta fechada bloqueia novo envio válido",
-      "status": 409,
-      "expected": [
-        409
-      ],
-      "ok": true,
-      "body": {
-        "error": "A coleta está encerrada."
-      }
-    },
-    {
-      "label": "Servidor rejeita campos obrigatórios ausentes",
-      "status": 400,
-      "expected": [
-        400
-      ],
-      "ok": true,
-      "body": {
-        "error": "Revise os campos indicados.",
-        "fields": {
-          "q01_nome": "Informe um texto válido.",
-          "q02_localizacao": "Escolha uma opção.",
-          "q06_modelo_leitura": "Escolha uma opção.",
-          "q07_frequencia": "Escolha uma opção.",
-          "q08_modalidades": "Selecione ao menos uma opção.",
-          "q09_disponibilidade": "Preencha este campo no formato indicado.",
-          "q10_intencao": "Escolha uma opção.",
-          "q13_autorizacao": "Escolha uma opção."
-        }
-      }
+      "label": "Probes POST",
+      "skipped": true,
+      "reason": "Coleta aberta: verificação automática não envia respostas."
     },
     {
       "label": "Origem diferente é recusada",

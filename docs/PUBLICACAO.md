@@ -12,4 +12,4 @@ Conferido em 2026-10-28T16:14:09-03:00.
 
 A conexão do frontend com a API foi verificada no navegador real. Os cinco recursos principais responderam 200; o painel exibiu login e a API negou leitura privada sem sessão com 401. O formulário avançou até revisão em modo fechado, sem envio.
 
-Coleta NÃO aberta. Ainda faltam responsável real, canal público de privacidade, retenção e conta administrativa autorizada. Nenhum administrador nem resposta real foi criado. Cadastro de credenciais deve ocorrer por mecanismo seguro, nunca pelo chat ou repositório. Depois de configurar, concluir o teste integrado de envio/consulta/exclusão antes de abrir ao público.
+Atualização final em 28/10/2026: coleta ABERTA. Responsável Cauê Almeida Cabral, canal caue@orbbotia.com, retenção 90 dias com exclusão manual, conta administrativa criada pelo organizador e autorizada. Teste integrado real de formulário → banco → painel → CSV → exclusão concluído. O teste foi removido e a saída segura do painel foi conferida. Evidência em validacao-integrada-real.json. Nenhuma senha ou chave secreta foi publicada. Consulte o guia do organizador para acompanhar respostas e controlar a coleta.
