@@ -1,6 +1,6 @@
 # Backend do Clube do Livro — operação e evidência
 
-Backend implantado no projeto gratuito wmrrscohfibprfqrprzf em 28/10/2026: migrações 001/002 aplicadas e Edge clube-api versão 2 ativa. A interface ainda não foi publicada no GitHub por falta de permissão da integração. Não há usuário administrativo nem respostas iniciais; coleta encerrada e dados de privacidade nulos. Evidências consolidadas em ../VALIDACAO.md.
+Backend implantado no projeto gratuito wmrrscohfibprfqrprzf em 28/10/2026: migrações 001/002 aplicadas e Edge clube-api versão 2 ativa. A interface está publicada no GitHub Pages em https://caue-a11y.github.io/clube-do-livro-paracuru/; coleta ainda fechada. Não há usuário administrativo nem respostas iniciais; coleta encerrada e dados de privacidade nulos. Evidências consolidadas em ../VALIDACAO.md.
 
 ## Arquivos e arquitetura
 

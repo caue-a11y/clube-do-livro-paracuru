@@ -16,13 +16,13 @@
   },
   {
     "path": "README.md",
-    "bytes": 5926,
-    "sha256": "ea47c38ab5bbfbe78dac6d74897d44fa305afe133e2274ccfda3cfe08e1e4640"
+    "bytes": 5974,
+    "sha256": "e8aa426b0fb1293be31da7e08d859465ca04f04980f128120d7e8687ba21dd0b"
   },
   {
     "path": "VALIDACAO.md",
-    "bytes": 7396,
-    "sha256": "5f10fe37a25b10d99249a7a719a734bd781a5454e9212b23930be8677696d448"
+    "bytes": 8078,
+    "sha256": "c50eeb9136ebbe04ebbc7590fa72a3540eda7644608df9cc76e835d175d51c85"
   },
   {
     "path": "admin.html",
@@ -33,6 +33,11 @@
     "path": "docs/OPERACAO.md",
     "bytes": 6867,
     "sha256": "c4c977edd93e829d7ee972267ca4f543bc428f98044f84db1986b452652cbe2f"
+  },
+  {
+    "path": "docs/PUBLICACAO.md",
+    "bytes": 1313,
+    "sha256": "e071be4c9b6088d068351a1e3650ec3cad4edcbe7215db9030e35dff6b5191f4"
   },
   {
     "path": "docs/exemplos/pages-workflow.yml",
@@ -47,12 +52,17 @@
   {
     "path": "docs/probes-publicos.json",
     "bytes": 2971,
-    "sha256": "240f55c02c6d71bf126f10c2eb21a2b654e00575438088564a31d53322e8766c"
+    "sha256": "c9a06aca22ee7f57bfd5f26cc9658eb954ff454cf325a1484c1ee712e3bec317"
   },
   {
     "path": "docs/testes-automatizados.txt",
     "bytes": 5173,
     "sha256": "2d7af493c324c64738e6e68f5f4253c216c45f987909128d74689063719a48b4"
+  },
+  {
+    "path": "docs/verificacao-github.json",
+    "bytes": 101,
+    "sha256": "64ba507f7a0e062cfe4c1118813da0ccc94387e21a4f8b87b191635289e93533"
   },
   {
     "path": "index.html",
@@ -111,8 +121,8 @@
   },
   {
     "path": "supabase/README.md",
-    "bytes": 17456,
-    "sha256": "67bbc637479040a2bfa8635164f70c2e9f1b77f0705128f84482ca67d2368208"
+    "bytes": 17491,
+    "sha256": "1bf78515f18f6f240769f386a8f2e1659ed4741b06e51c07d0898a74d171d5ac"
   },
   {
     "path": "supabase/config.toml",

@@ -4,7 +4,7 @@
 
 Implementação da interface pública, painel e backend entregue para integração. Banco gratuito e função clube-api versão 2 implantados no projeto Supabase wmrrscohfibprfqrprzf, região sa-east-1. Duas migrações aplicadas com sucesso. A base real está vazia, sem administrador cadastrado e com coleta fechada.
 
-Estado atualizado às 16:09 BRT: o bloqueio inicial de criação pela integração foi resolvido por login do organizador no navegador. O repositório caue-a11y/clube-do-livro-paracuru foi criado, sem alterar outros repositórios, e o envio pela integração funciona. A publicação no GitHub Pages está em andamento e o endereço só será anunciado depois de validado. A prévia de revisão permanece isolada, sem API ou coleta.
+Estado confirmado em 2026-10-28T16:14:09-03:00: o repositório https://github.com/caue-a11y/clube-do-livro-paracuru foi criado na conta correta e recebeu 41 arquivos no commit de código fbc20a2cfcd9346f3dc904d7fab5d98aa2ca4c1f. A árvore remota foi comparada com os hashes Git dos 41 arquivos locais, sem divergências. GitHub Pages foi ativado pela branch main, pasta raiz, e o site https://caue-a11y.github.io/clube-do-livro-paracuru/ abriu com HTTPS no navegador. A prévia de revisão continua sendo um artefato separado sem coleta.
 
 ## Verificações executadas
 
@@ -45,6 +45,10 @@ As larguras 320, 390, 768 e 1440 px foram medidas em frames de teste com viewpor
 
 A frente do painel concluiu 17 checagens em Chrome 156, com rede interceptada e 123 registros sintéticos isolados. O relatório local foi conferido e as linhas de resultado estão em docs/painel-testes-simulados.txt. Foram exercitados login/refresh simulados, todas as páginas filtradas, denominadores, compatibilidade, respostas obsoletas, texto hostil, CAS/409, exclusão, CSV, bloqueio de abertura sem privacidade, logout e ausência de allowlist. Login, painel e detalhe expandido não apresentaram overflow nas quatro larguras. Esses resultados não comprovam conta real, autorização ou persistência no Supabase: as pendências integradas abaixo permanecem.
 
+### Endereço público final
+
+No GitHub Pages real, os cinco recursos conferidos (public.js, admin.js, styles.css, questionario.json e admin.html) retornaram HTTP 200. O frontend fez consulta CORS real à API e confirmou coleta fechada. A navegação nas três etapas até a revisão funcionou com dados sintéticos apenas na memória; envio ficou desabilitado e nenhum sucesso fictício foi mostrado. A página administrativa carregou o login e uma consulta privada sem sessão foi negada com 401, também a partir da origem real do site. Não foram usados dados reais nem criado administrador.
+
 ## Critérios com validação ainda pendente
 
 - Fluxo de ponta a ponta no URL público final, do envio no navegador até consulta em conta administrativa real (AC01).
@@ -58,4 +62,4 @@ A frente do painel concluiu 17 checagens em Chrome 156, com rede interceptada e 
 
 ## Antes de abrir coleta real
 
-Liberar a publicação na conta GitHub correta, verificar o URL final amigável, cadastrar o acesso administrativo por canal seguro, informar responsável/canal de privacidade e retenção, verificar os limites/logs/backup do fornecedor e completar o fluxo integrado acima. A retenção informada não é um expurgo automático: o organizador precisa executar as exclusões ou aprovar rotina própria. Sem essas condições, manter coleta fechada.
+A publicação e o URL amigável já foram conferidos. Falta cadastrar o acesso administrativo por canal seguro, informar responsável/canal de privacidade e retenção, verificar os limites/logs/backup do fornecedor e completar o fluxo integrado acima. A retenção informada não é um expurgo automático: o organizador precisa executar as exclusões ou aprovar rotina própria. Sem essas condições, manter coleta fechada.

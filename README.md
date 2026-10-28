@@ -4,9 +4,9 @@ Página de pesquisa com 14 perguntas, revisão antes do envio e painel privado d
 
 ## Estado desta entrega
 
-O projeto gratuito do Supabase foi criado e a implementação foi preparada para publicação. Consulte VALIDACAO.md para o que realmente foi executado. A coleta começa fechada: não há responsável/canal de privacidade nem retenção definidos pelo organizador. Nenhum dado real deve ser coletado antes dessa configuração. Não há administrador com senha pública ou dados de demonstração misturados na base.
+O site foi publicado em https://caue-a11y.github.io/clube-do-livro-paracuru/ e o backend está implantado no projeto gratuito do Supabase. Consulte VALIDACAO.md para o que realmente foi executado. A coleta começa fechada: não há responsável/canal de privacidade nem retenção definidos pelo organizador. Nenhum dado real deve ser coletado antes dessa configuração. Não há administrador com senha pública ou dados de demonstração misturados na base.
 
-O repositório público caue-a11y/clube-do-livro-paracuru foi criado após login seguro no navegador. O envio de código pela integração funciona; a ativação e a validação do GitHub Pages estão em andamento. Consulte VALIDACAO.md para o estado confirmado da publicação.
+O repositório público https://github.com/caue-a11y/clube-do-livro-paracuru foi criado após login seguro no navegador. GitHub Pages está ativo na branch main, pasta raiz; URL público e conexão com a API foram conferidos no navegador. Consulte VALIDACAO.md e docs/PUBLICACAO.md para as verificações e pendências.
 
 ## Estrutura
 
@@ -36,7 +36,7 @@ Essa escolha usa o fluxo oficial Supabase Auth com token em memória, em vez de 
 
 ## Publicar
 
-O destino solicitado é a conta GitHub caue-a11y, com repositório sugerido clube-do-livro-paracuru. A integração precisa de permissão de escrita/criação, ou o organizador pode criar o repositório e permitir seu acesso. Não publicar em outra conta como substituição.
+O destino solicitado é a conta GitHub caue-a11y, com repositório sugerido clube-do-livro-paracuru. A criação foi feita pelo navegador autenticado e o código enviado pela integração. Não publicar em outra conta como substituição.
 
 Depois do upload, em Settings > Pages, selecione Deploy from a branch, branch main e pasta / (root). Como a interface não requer build, esse é o caminho mais simples. O arquivo .nojekyll evita processamento Jekyll. Os testes foram executados antes da entrega; o workflow opcional de teste/build está documentado em docs/exemplos/pages-workflow.yml e não fica ativo em paralelo com a publicação por branch. Confira o endereço efetivamente retornado pelo GitHub e valide HTTPS, respostas, painel privado e exclusão de um teste identificado. Não trate o URL do repositório como URL do formulário.
 
