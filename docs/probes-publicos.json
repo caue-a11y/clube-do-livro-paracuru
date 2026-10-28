@@ -1,0 +1,125 @@
+{
+  "tested_at": "2026-10-28T18:51:24.911Z",
+  "results": [
+    {
+      "label": "Config pública confirma coleta fechada",
+      "status": 200,
+      "expected": [
+        200
+      ],
+      "ok": true,
+      "body": {
+        "open": false,
+        "privacy": {
+          "channel": null,
+          "responsible": null,
+          "notice_version": null,
+          "retention_days": null
+        },
+        "form_version": "2026-10-28-v1-proposta"
+      }
+    },
+    {
+      "label": "Sem sessão: /admin/respostas",
+      "status": 401,
+      "expected": [
+        401
+      ],
+      "ok": true,
+      "body": {
+        "error": "Entre novamente para acessar o painel."
+      }
+    },
+    {
+      "label": "Sem sessão: /admin/respostas/11111111-1111-4111-8111-111111111111",
+      "status": 401,
+      "expected": [
+        401
+      ],
+      "ok": true,
+      "body": {
+        "error": "Entre novamente para acessar o painel."
+      }
+    },
+    {
+      "label": "Sem sessão: /admin/config",
+      "status": 401,
+      "expected": [
+        401
+      ],
+      "ok": true,
+      "body": {
+        "error": "Entre novamente para acessar o painel."
+      }
+    },
+    {
+      "label": "Sem sessão: /admin/exportacao",
+      "status": 401,
+      "expected": [
+        401
+      ],
+      "ok": true,
+      "body": {
+        "error": "Entre novamente para acessar o painel."
+      }
+    },
+    {
+      "label": "Tabela de respostas não pode ser lida com chave pública",
+      "status": 401,
+      "expected": [
+        401,
+        403
+      ],
+      "ok": true,
+      "body": {
+        "code": "42501",
+        "details": null,
+        "hint": "Grant the required privileges to the current role with: GRANT SELECT ON public.responses TO anon;",
+        "message": "permission denied for table responses"
+      }
+    },
+    {
+      "label": "Coleta fechada bloqueia novo envio válido",
+      "status": 409,
+      "expected": [
+        409
+      ],
+      "ok": true,
+      "body": {
+        "error": "A coleta está encerrada."
+      }
+    },
+    {
+      "label": "Servidor rejeita campos obrigatórios ausentes",
+      "status": 400,
+      "expected": [
+        400
+      ],
+      "ok": true,
+      "body": {
+        "error": "Revise os campos indicados.",
+        "fields": {
+          "q01_nome": "Informe um texto válido.",
+          "q02_localizacao": "Escolha uma opção.",
+          "q06_modelo_leitura": "Escolha uma opção.",
+          "q07_frequencia": "Escolha uma opção.",
+          "q08_modalidades": "Selecione ao menos uma opção.",
+          "q09_disponibilidade": "Preencha este campo no formato indicado.",
+          "q10_intencao": "Escolha uma opção.",
+          "q13_autorizacao": "Escolha uma opção."
+        }
+      }
+    },
+    {
+      "label": "Origem diferente é recusada",
+      "status": 403,
+      "expected": [
+        403
+      ],
+      "ok": true,
+      "body": {
+        "error": "Origem não permitida."
+      }
+    }
+  ]
+}

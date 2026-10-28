@@ -1,0 +1,12 @@
+node_modules/
+.env
+.env.*
+!.env.example
+*.db
+*.sqlite*
+backups/
+_site/
+.DS_Store
+__pycache__/
+*_params.json
+tests/backend-runtime*/

@@ -1,0 +1,186 @@
+{
+  "schema_version": "1.0",
+  "form_id": "clube-do-livro-paracuru",
+  "form_version": "2026-10-28-v1-proposta",
+  "status": "proposta_para_implementacao_local",
+  "locale": "pt-BR",
+  "reporting_timezone": "America/Sao_Paulo",
+  "reading_year": 2026,
+  "title": "Clube do livro: vamos formar um grupo?",
+  "intro": [
+    "Quero reunir pessoas para criar um compromisso regular com a leitura, trocar ideias e conversar sobre diferentes visões de mundo.",
+    "Ainda estamos descobrindo como esse clube pode funcionar. Suas respostas vão ajudar a escolher o formato, as leituras e os horários. Você pode participar mesmo que esteja começando a ler ou retomando esse hábito."
+  ],
+  "reading_access_note": "A proposta é que as escolhas incluam uma alternativa gratuita, como um texto ou livro em PDF disponibilizado pelo autor, pela editora ou em domínio público.",
+  "privacy_notice_status": "pendente_antes_de_coleta_real",
+  "privacy_notice_requirements": ["finalidade", "dados_recebidos", "responsavel", "canal_de_privacidade", "retencao", "como_pedir_exclusao"],
+  "draft_policy": "memoria_da_pagina_sem_envio_automatico",
+  "draft_notice": "Suas respostas ainda não foram enviadas. Se recarregar ou fechar esta página, você pode perdê-las.",
+  "success_message": "Obrigado por responder! Vou reunir as respostas para pensar em uma proposta de primeiro encontro. Se você autorizou o contato, te aviso por lá.",
+  "steps": [
+    {"id": "sobre_voce", "title": "Sobre você", "questions": ["q01_nome", "q02_localizacao", "q03_livros_ano", "q04_experiencia"]},
+    {"id": "leituras_encontros", "title": "Leituras e encontros", "questions": ["q05_generos", "q06_modelo_leitura", "q07_frequencia", "q08_modalidades", "q09_disponibilidade"]},
+    {"id": "participacao_contato", "title": "Participação e contato", "questions": ["q10_intencao", "q11_barreiras", "q12_sugestoes", "q13_autorizacao", "q14_contato"]}
+  ],
+  "questions": [
+    {
+      "id": "q01_nome", "number": 1, "type": "short_text", "required": true,
+      "label": "Como você gostaria de ser chamado(a)?",
+      "min_length": 1, "max_length": 80
+    },
+    {
+      "id": "q02_localizacao", "number": 2, "type": "single_choice", "required": true,
+      "label": "Você mora em Paracuru?",
+      "options": [
+        {"value": "sim", "label": "Sim."},
+        {"value": "nao_posso_ir", "label": "Não, mas consigo ir a Paracuru para os encontros."},
+        {"value": "nao_apenas_online", "label": "Não, e participaria apenas online."}
+      ]
+    },
+    {
+      "id": "q03_livros_ano", "number": 3, "type": "single_choice", "required": false,
+      "label": "Quantos livros você leu em 2026 até agora?",
+      "help": "É só para conhecer seu momento de leitura. Todas as respostas são bem-vindas.",
+      "options": [
+        {"value": "nenhum", "label": "Nenhum."},
+        {"value": "1_3", "label": "De 1 a 3."},
+        {"value": "4_6", "label": "De 4 a 6."},
+        {"value": "7_12", "label": "De 7 a 12."},
+        {"value": "13_mais", "label": "13 ou mais."}
+      ]
+    },
+    {
+      "id": "q04_experiencia", "number": 4, "type": "single_choice", "required": false,
+      "label": "Você já participou de um clube do livro ou grupo de leitura?",
+      "options": [
+        {"value": "atual", "label": "Sim, participo atualmente."},
+        {"value": "anterior", "label": "Sim, já participei."},
+        {"value": "primeira_vez", "label": "Não, seria minha primeira vez."}
+      ]
+    },
+    {
+      "id": "q05_generos", "number": 5, "type": "multiple_choice", "required": false,
+      "label": "Que tipos de leitura mais despertam seu interesse?", "help": "Marque até 3 opções.",
+      "max_selections": 3,
+      "options": [
+        {"value": "narrativas_ficcao", "label": "Romances e outras narrativas de ficção."},
+        {"value": "fantasia_fc", "label": "Fantasia e ficção científica."},
+        {"value": "suspense", "label": "Suspense, mistério e terror."},
+        {"value": "contos_cronicas_poesia", "label": "Contos, crônicas e poesia."},
+        {"value": "biografias", "label": "Biografias e memórias."},
+        {"value": "historia_sociedade", "label": "História, política e sociedade."},
+        {"value": "filosofia_psicologia", "label": "Filosofia e psicologia."},
+        {"value": "ciencia", "label": "Ciência e divulgação científica."},
+        {"value": "desenvolvimento_pessoal", "label": "Desenvolvimento pessoal."},
+        {"value": "descobrir", "label": "Quero conhecer leituras diferentes."},
+        {"value": "outro", "label": "Outros."}
+      ],
+      "other_field": {"when_selected": "outro", "key": "outro_texto", "required_when_visible": true, "max_length": 200, "clear_when_hidden": true}
+    },
+    {
+      "id": "q06_modelo_leitura", "number": 6, "type": "single_choice", "required": true,
+      "label": "Como você gostaria de organizar as leituras?", "help": "Escolha a proposta que mais te atrai.",
+      "options": [
+        {"value": "mesmo_livro", "label": "Todos leem o mesmo livro, inteiro ou em partes, e conversam sobre ele."},
+        {"value": "mesmo_tema", "label": "Escolhemos um tema e cada pessoa lê um dos livros de uma lista, para discutir diferentes perspectivas."},
+        {"value": "alternar", "label": "Alternamos entre essas duas propostas."},
+        {"value": "sem_preferencia", "label": "Ainda não tenho preferência."}
+      ],
+      "note_ref": "reading_access_note"
+    },
+    {
+      "id": "q07_frequencia", "number": 7, "type": "single_choice", "required": true,
+      "label": "Com que frequência você conseguiria participar dos encontros?", "help": "Pense no que cabe na sua rotina.",
+      "options": [
+        {"value": "semanal", "label": "Uma vez por semana."},
+        {"value": "quinzenal", "label": "A cada 15 dias."},
+        {"value": "mensal", "label": "Uma vez por mês."},
+        {"value": "ocasional", "label": "Só conseguiria participar de vez em quando."},
+        {"value": "indefinida", "label": "Ainda não sei."}
+      ]
+    },
+    {
+      "id": "q08_modalidades", "number": 8, "type": "multiple_choice", "required": true,
+      "label": "Em quais formatos você conseguiria participar?", "help": "Marque todas as opções que funcionam para você.",
+      "min_selections": 1, "max_selections": 3,
+      "options": [
+        {"value": "presencial", "label": "Todos os encontros presenciais em Paracuru."},
+        {"value": "online", "label": "Todos os encontros online."},
+        {"value": "alternado", "label": "Encontros alternados: alguns presenciais em Paracuru e outros online."}
+      ]
+    },
+    {
+      "id": "q09_disponibilidade", "number": 9, "type": "availability", "required": true,
+      "label": "Quais dias e períodos costumam funcionar para você?",
+      "help": "Marque todas as combinações possíveis. Depois vamos combinar o horário exato.",
+      "days": [
+        {"value": "seg", "label": "Segunda-feira"}, {"value": "ter", "label": "Terça-feira"},
+        {"value": "qua", "label": "Quarta-feira"}, {"value": "qui", "label": "Quinta-feira"},
+        {"value": "sex", "label": "Sexta-feira"}, {"value": "sab", "label": "Sábado"},
+        {"value": "dom", "label": "Domingo"}
+      ],
+      "periods": [
+        {"value": "manha", "label": "Manhã"}, {"value": "tarde", "label": "Tarde"},
+        {"value": "noite", "label": "Noite"}
+      ],
+      "variable_option": {"value": "variavel", "label": "Minha disponibilidade varia; preciso combinar a cada encontro.", "exclusive_with_fixed_slots": true},
+      "answer_contract": {"mode": "fixa|variavel", "slots": "array de objetos unicos com day e period; vazio somente no modo variavel"}
+    },
+    {
+      "id": "q10_intencao", "number": 10, "type": "single_choice", "required": true,
+      "label": "Se encontrarmos um formato e um horário que funcionem para você, qual seria sua intenção?",
+      "options": [
+        {"value": "regular", "label": "Reservar esse horário na rotina e participar regularmente."},
+        {"value": "experimentar", "label": "Experimentar um primeiro encontro antes de decidir."},
+        {"value": "ocasional", "label": "Participar quando conseguir, sem compromisso regular."},
+        {"value": "acompanhar", "label": "Por enquanto, só acompanhar a ideia."}
+      ]
+    },
+    {
+      "id": "q11_barreiras", "number": 11, "type": "multiple_choice", "required": false,
+      "label": "O que poderia dificultar sua participação?", "help": "Opcional. Marque todas as opções que se aplicam.",
+      "options": [
+        {"value": "tempo_leitura", "label": "Encontrar tempo para ler."},
+        {"value": "horarios", "label": "Conciliar os horários dos encontros."},
+        {"value": "acesso_livros", "label": "Conseguir os livros ou pagar por eles."},
+        {"value": "deslocamento", "label": "Deslocar-me até o local."},
+        {"value": "internet_espaco", "label": "Ter internet ou um espaço adequado para participar online."},
+        {"value": "inseguranca", "label": "Sentir vergonha ou insegurança para falar no grupo."},
+        {"value": "nenhuma", "label": "Nada específico neste momento."},
+        {"value": "outro", "label": "Outro."}
+      ],
+      "exclusive_options": ["nenhuma"],
+      "other_field": {"when_selected": "outro", "key": "outro_texto", "required_when_visible": true, "max_length": 200, "clear_when_hidden": true}
+    },
+    {
+      "id": "q12_sugestoes", "number": 12, "type": "long_text", "required": false,
+      "label": "Tem algum livro, tema ou sugestão que você gostaria de trazer para o clube?", "max_length": 1000
+    },
+    {
+      "id": "q13_autorizacao", "number": 13, "type": "single_choice", "required": true,
+      "label": "Posso entrar em contato com você para combinar um primeiro encontro?",
+      "options": [
+        {"value": "sim", "label": "Sim."},
+        {"value": "nao", "label": "Não, prefiro apenas responder à pesquisa."}
+      ]
+    },
+    {
+      "id": "q14_contato", "number": 14, "type": "contact", "required": false,
+      "label": "Por onde posso falar com você?",
+      "help": "Deixe seu @ do Instagram ou seu WhatsApp com DDD. Esse contato será usado para conversar sobre a organização do clube.",
+      "visible_when": {"question_id": "q13_autorizacao", "equals": "sim"},
+      "required_when_visible": true, "clear_when_hidden": true, "server_discard_when_hidden": true,
+      "channels": [{"value": "instagram", "label": "Instagram"}, {"value": "whatsapp", "label": "WhatsApp"}],
+      "max_length": 100
+    }
+  ],
+  "cross_validation": [
+    {
+      "if": {"question_id": "q02_localizacao", "equals": "nao_apenas_online"},
+      "question_id": "q08_modalidades", "allowed_values": ["online"],
+      "message": "Você indicou que participaria apenas online. Revise a localização ou os formatos escolhidos."
+    }
+  ],
+  "defaults": {"preselected_options": false},
+  "implementation_note": "Este arquivo descreve conteúdo e regras. Não é JSON Schema nem configuração compatível com o gerador offline existente. Os agentes devem implementar tipos e validação de servidor próprios, preservando IDs e comportamentos."
+}

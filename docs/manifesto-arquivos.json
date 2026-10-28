@@ -1,0 +1,202 @@
+[
+  {
+    "path": ".gitignore",
+    "bytes": 132,
+    "sha256": "6e0702f75335cbf50a283df7b41280454946ec5ea985ab241a1fb2f00614c2ac"
+  },
+  {
+    "path": ".nojekyll",
+    "bytes": 1,
+    "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+  },
+  {
+    "path": "CONTRATO.md",
+    "bytes": 6398,
+    "sha256": "e57ac2ee6b24c0af845190aab3e7338dc6b19ffe36ece74b2e65762c46964a0c"
+  },
+  {
+    "path": "README.md",
+    "bytes": 5926,
+    "sha256": "ea47c38ab5bbfbe78dac6d74897d44fa305afe133e2274ccfda3cfe08e1e4640"
+  },
+  {
+    "path": "VALIDACAO.md",
+    "bytes": 7396,
+    "sha256": "5f10fe37a25b10d99249a7a719a734bd781a5454e9212b23930be8677696d448"
+  },
+  {
+    "path": "admin.html",
+    "bytes": 20288,
+    "sha256": "ec400fdce04e91d8325f45d73dfde3396fd982e358e8ae50afaa208e2560eddb"
+  },
+  {
+    "path": "docs/OPERACAO.md",
+    "bytes": 6867,
+    "sha256": "c4c977edd93e829d7ee972267ca4f543bc428f98044f84db1986b452652cbe2f"
+  },
+  {
+    "path": "docs/exemplos/pages-workflow.yml",
+    "bytes": 782,
+    "sha256": "2a08822e50ad3e463865129c94305089ad1945e22b5800dc5deb95c4c69046e5"
+  },
+  {
+    "path": "docs/painel-testes-simulados.txt",
+    "bytes": 1518,
+    "sha256": "76b12c9591ada3fb751029a0f9f464baf750b9a7765bf4ac89fc96ad7905f4d9"
+  },
+  {
+    "path": "docs/probes-publicos.json",
+    "bytes": 2971,
+    "sha256": "240f55c02c6d71bf126f10c2eb21a2b654e00575438088564a31d53322e8766c"
+  },
+  {
+    "path": "docs/testes-automatizados.txt",
+    "bytes": 5173,
+    "sha256": "2d7af493c324c64738e6e68f5f4253c216c45f987909128d74689063719a48b4"
+  },
+  {
+    "path": "index.html",
+    "bytes": 8587,
+    "sha256": "9081df97ab5cf6e0fb722465533cab3229ed64dc1e120eb068ad69a7ecd97ea8"
+  },
+  {
+    "path": "package.json",
+    "bytes": 496,
+    "sha256": "2c42a05612887f6323eeb609e8db582a14b1a422c8acd9d26583aae21049710c"
+  },
+  {
+    "path": "scripts/package_site.py",
+    "bytes": 565,
+    "sha256": "21e9af976ae091cca8bb2dbbcb0399fab2838532eb24d16a45923c6888d38e47"
+  },
+  {
+    "path": "scripts/preview_artifact.py",
+    "bytes": 1983,
+    "sha256": "f72086d0541907fe6e28ff16864903b90c51690da15ca35a7acb35b480673a23"
+  },
+  {
+    "path": "shared/analysis.js",
+    "bytes": 3323,
+    "sha256": "19684a374af1a1f2ab554946d24cf57fee79a8ff9cb263f141365c0cf98328e7"
+  },
+  {
+    "path": "shared/questionario.json",
+    "bytes": 11149,
+    "sha256": "d7c9ef98a6d62319e6151d296a9baa331558dd5e058a2d7b829b5f6363c17397"
+  },
+  {
+    "path": "src/admin.js",
+    "bytes": 63254,
+    "sha256": "cbe2744a8920507df96be8d4a6971464775226c5c69709d768f49c7c9b269a6d"
+  },
+  {
+    "path": "src/api.js",
+    "bytes": 1865,
+    "sha256": "5ca10171cec82388ece757c747672c28d5610169452028b5bc8a8695dac7e6ae"
+  },
+  {
+    "path": "src/config.js",
+    "bytes": 321,
+    "sha256": "9b6ac00362db35e5efc43d5fdbcc1f2a04e6e26e7e8519116922a183f329d645"
+  },
+  {
+    "path": "src/public.js",
+    "bytes": 39641,
+    "sha256": "7a5566b846e9a7a7d5291f3c6036966dd11de5e6a3c2a13ce0713cfd92fd053c"
+  },
+  {
+    "path": "src/styles.css",
+    "bytes": 18953,
+    "sha256": "86113b28a82542aca76f4f2de1525ee8eead9d75f295838e4141242944dea61c"
+  },
+  {
+    "path": "supabase/README.md",
+    "bytes": 17456,
+    "sha256": "67bbc637479040a2bfa8635164f70c2e9f1b77f0705128f84482ca67d2368208"
+  },
+  {
+    "path": "supabase/config.toml",
+    "bytes": 181,
+    "sha256": "157826df4947ab5d4c45a135f24ac1394e4ee83b3c33127f1b82ce218efd4c59"
+  },
+  {
+    "path": "supabase/functions/clube-api/app.mjs",
+    "bytes": 11117,
+    "sha256": "03bb31d5735c23869343d42d261e9c33ec872acdf70cde54948a5c18ae816a31"
+  },
+  {
+    "path": "supabase/functions/clube-api/domain.mjs",
+    "bytes": 16679,
+    "sha256": "7a30fbc813815850c52d205c831eb9e631caa2d2c89f5ddfe4de3fd97c31d71e"
+  },
+  {
+    "path": "supabase/functions/clube-api/index.ts",
+    "bytes": 539,
+    "sha256": "9dc8719cd241420000763821227eff5d4c2ccd144d2b5a224625a9d318aeeb40"
+  },
+  {
+    "path": "supabase/functions/clube-api/questionario.json",
+    "bytes": 11149,
+    "sha256": "d7c9ef98a6d62319e6151d296a9baa331558dd5e058a2d7b829b5f6363c17397"
+  },
+  {
+    "path": "supabase/migrations/202610280001_clube.sql",
+    "bytes": 21791,
+    "sha256": "6ef4c2ede5023d5be719bda2ccd083197d9260823bb37590ea656c80bc3c3e14"
+  },
+  {
+    "path": "supabase/migrations/202610280002_notice_snapshot.sql",
+    "bytes": 1479,
+    "sha256": "5079d54b86831b91563ba275f2ca6f2b19a4836e23f4ce2764bcfc6e1ff65f3e"
+  },
+  {
+    "path": "tests/analysis.test.js",
+    "bytes": 3834,
+    "sha256": "a2f336bfe4a22752bf1483f0a1116cbf5aefaae0a82de930f863add6b1c9d998"
+  },
+  {
+    "path": "tests/api.test.js",
+    "bytes": 2331,
+    "sha256": "c38c96a5466a13b94918269338df99259b7940cf5db27f39d97a62cea26a029d"
+  },
+  {
+    "path": "tests/backend-check.sh",
+    "bytes": 1132,
+    "sha256": "12ffa4d293ba5bf8710e486a96783e8c0dd6e64fbd35cff090b434a7dc8e265d"
+  },
+  {
+    "path": "tests/backend-domain.test.mjs",
+    "bytes": 11914,
+    "sha256": "44660e2d9858c87326b44958c53037e17364ccd336ef6209a973c1a84ccb6a22"
+  },
+  {
+    "path": "tests/backend-http.test.mjs",
+    "bytes": 10752,
+    "sha256": "f329be70c8482fe279f4f05942c2296adf58c40bfcaa51318092118552f39953"
+  },
+  {
+    "path": "tests/backend-phone.test.mjs",
+    "bytes": 1486,
+    "sha256": "76fd8946deb019757e84e8c6230b0fa36e382023beb048be3371e0258ef49feb"
+  },
+  {
+    "path": "tests/backend-postgres.test.mjs",
+    "bytes": 11360,
+    "sha256": "ad4b2062e93cfd01df862a8213466061cd2f98c5be969b75dad910bcba626a68"
+  },
+  {
+    "path": "tests/deployed-public.mjs",
+    "bytes": 2540,
+    "sha256": "dc4bb558492187d9d67644286d6b0266ee91e82bfbf545e1cfce297644680cd1"
+  },
+  {
+    "path": "tests/deployed-transaction.sql",
+    "bytes": 1517,
+    "sha256": "a76c7b5594d901b3fb10f7c2f244859b9ba1a9eaf417b7c8b323b1fe3dd97c34"
+  },
+  {
+    "path": "tests/notice.test.mjs",
+    "bytes": 2391,
+    "sha256": "ca06304da6ba927b348ddcac1db0586cb8bbd1361270edc79d033b1ea02b8944"
+  }
+]

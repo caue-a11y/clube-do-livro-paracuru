@@ -1,0 +1,4 @@
+# Public questionnaire: admin requests are verified inside the function via Auth + allowlist.
+[functions.clube-api]
+verify_jwt = false
+entrypoint = "./functions/clube-api/index.ts"

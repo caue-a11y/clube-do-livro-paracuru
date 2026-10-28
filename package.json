@@ -1,0 +1,12 @@
+{
+  "name": "clube-do-livro-paracuru",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Pesquisa de interesse e painel privado do clube do livro de Paracuru",
+  "scripts": {
+    "test": "node --test tests/*.test.js tests/*.test.mjs",
+    "check": "node --check src/api.js && node --check src/config.js && node --check src/public.js && node --check src/admin.js && node --check shared/analysis.js",
+    "preview": "python3 -m http.server 4173 --bind 127.0.0.1"
+  }
+}

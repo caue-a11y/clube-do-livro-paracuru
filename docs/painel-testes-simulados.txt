@@ -1,0 +1,20 @@
+Checagens de interface administrativa com rede interceptada e 123 registros sintéticos.
+Não comprovam autenticação ou persistência no Supabase real.
+
+PASS No private request before login
+PASS Login layout no horizontal overflow at 320/390/768/1440
+PASS Official password + in-memory refresh grants; 123 records across 2 server pages, paged cards and safe hostile name
+PASS Authenticated dashboard layout no horizontal overflow at all 4 widths
+PASS Client pagination over complete filtered dataset
+PASS Compatibility exact scenario: 82 fixed, 82 regular/contactable, 41 variable
+PASS São Paulo midnight boundary and missing-answer denominators
+PASS Debounced filter invalidates in-flight stale results; only final one-record result committed
+PASS Complete detail fetched separately; free-text HTML inert
+PASS Explicit confirmation required; CAS conflict preserves edits, reload + valid save, history timestamp rendered
+PASS Expanded private detail without horizontal overflow at all widths
+PASS CSV requires explicit scope + personal-data acknowledgement; fresh counts and apikey/bearer
+PASS Collection stays closed; missing real privacy blocks opening; closing/closed save supports null privacy
+PASS Delete requires exact protocol + current revision, then complete summaries refresh
+PASS Official logout POST; private DOM/data wiped; no persistent browser storage
+PASS Missing allowlist denies private panel with organizer/setup guidance and no raw email/ID
+PASS No uncaught runtime errors or test-router errors
